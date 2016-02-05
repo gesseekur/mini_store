@@ -1,0 +1,55 @@
+<div ng-controller='ordersController'>
+
+<div class="container dashboardSearch">
+	<input type='text' placeholder="Search Orders..." ng-model='filter_name'>
+</div>
+
+
+<div class="row center container">
+	<table class="table col s6 m6 l6 bordered striped">
+		<thead>
+			<tr>
+				<td>Customer Name</td>
+				<td>Product</td>
+				<td>Quantity</td>
+				<td>Date</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat='order in orders|filter:filter_name'>
+				<td>{{order.name}}</td>
+				<td>{{order.product}}</td>
+				<td>{{order.quantity}}</td>
+				<td>{{order.date|date}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="customer col s6 m6 l6">
+	<h3>Add a new order</h3>
+	<form>
+	<p>Customer
+	   <select class="browser-default" ng-model='new_order.name'>
+	  	 	<option ng-repeat='customer in customers'>{{customer.name}}</option>
+	   </select>
+	</p>
+	<p>Order
+	   <select class="browser-default" ng-model='new_order.product'>
+	   		<option ng-repeat='product in products'>{{product.name}}</option>
+	   </select>
+	    <select class="browser-default" ng-model='new_order.quantity'>
+	   		<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+	   </select>
+	</p>
+	<p><input class="waves-effect waves-light  light-green btn" type='submit' value='Order' ng-click='addOrders()'></p>
+	</form>
+	</div>
+</div>
+	
+
+
+</div>

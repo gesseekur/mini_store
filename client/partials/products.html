@@ -1,0 +1,33 @@
+<div ng-controller='productsController'>
+	<div class="left dashboardSearch">
+		<input type='text' placeholder='search...' ng-model='filter_name'>
+	</div>
+	<div class='line right ' ng-repeat='product in products | filter:filter_name'>
+		<p class="center"><img ng-src='{{product.url}}' height='100' width='130'</></p>
+		<p class="center"><b>{{product.name}}</b></p>
+		<p class="center">({{product.quantity}} left)</p>
+<!-- 	<ul>
+		<li ng-repeat='product in products | limitTo: 5'>{{product.name}}</li>
+	</ul> -->
+	</div>
+
+<div class="row">
+	<div class="left product col s2 m2 l2">
+	<h5>Add a new product</h5>
+	<form>
+		<p>Name:<input type='text' ng-model='new_product.name'</p>
+		<p>Image(url):<input type='text' ng-model='new_product.url'</p>
+		<p>Description:<input type='text' ng-model='new_product.description'</p>
+		<select ng-model='new_product.quantity'>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+		<input class='waves-effect waves-light  light-green btn' type='submit' value='Create' ng-click='addProduct()'>
+	</form>
+	</div>
+</div>
+
+</div>

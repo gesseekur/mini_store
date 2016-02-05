@@ -1,0 +1,58 @@
+<style type="text/css">
+
+input[placeholder] {
+	color:black;
+}
+
+.dashboardSearch {
+	width:10%;
+}
+
+.orders {
+	background-color:white;
+	width:300px;
+}
+
+.customer {
+	border:1px solid black;
+	padding:10px;
+}
+
+.product {
+	border:1px solid black;
+}
+
+thead {
+	background-color: #616161 ;
+	color:white;
+}
+
+h3 {
+	font-family:Satisfy, Arial;
+}
+
+h5 {
+	font-family:Satisfy, Arial;
+}
+
+td {
+	border-right:1px solid black;
+}
+
+.table{
+	border:1px solid black;
+}
+
+.line {
+	display:inline-block;
+	border:1px dashed black;
+	margin-top:3%;
+	background-color:#f5f5f5  ;
+}
+
+.navfont {
+	font-family:Crushed, Arial;
+	font-size:60%;
+}
+</style>
+		

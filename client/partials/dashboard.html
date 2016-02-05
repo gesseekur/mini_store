@@ -1,0 +1,36 @@
+<div id='wrapper' ng-style="{'background-image':'url(/images/cart.png)'}">
+	<div ng-controller='dashboardsController'>
+		<div class="container dashboardSearch">
+			<input type='text' placeholder='search...' ng-model='filter_name'>
+		</div>
+		<div class="row container">
+			<h3>Recent Orders</h3>
+			<div ng-repeat='order in orders|limitTo:limitOrders'>
+				<li>{{order.name}} purchased {{order.quantity}} {{order.product}} ({{order.date|date:'H'}} hours ago)</li>
+			</div>
+				<br>
+				<button class="waves-effect waves-light btn" ng-click='showMoreOrders()'>Show More..</button>
+		</div>
+		<hr>
+		<div class="customers row container">
+			<h3>New Customers</h3>
+			<div ng-repeat='customer in customers|limitTo:limitCustomers'>
+				<li>{{customer.name}} joined the store...({{customer.date|date:'H'}} hours ago)</li>
+			</div>
+			<br>
+				<button class="waves-effect waves-light btn" ng-click='showMoreCustomers()'>Show More..</button>
+		</div>
+
+		<div class="row container">
+		<div class='line' ng-repeat='product in products|limitTo:limitProducts'>
+			<p class="center"><img ng-src='{{product.url}}' height='120' width='130'</></p><hr>
+			<p class="center"><strong> {{product.name}} </strong> </p>
+			<p class="center"> ({{product.quantity}} left)</p>
+		</div>
+			<br><br>
+			<button class="waves-effect waves-light btn" ng-click='showMoreProducts()'>Show More..</button>
+		</div>
+
+		<hr>
+	</div>
+</div>
