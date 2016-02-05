@@ -1,4 +1,4 @@
-<h2> Mini_Store </h2>
+<h3> Mini_Store </h3>
 A project created for sellers and buyers - powered by MEAN.
 
 ![alt tag](https://raw.githubusercontent.com/gesseekur/mini_store/master/client/images/screencapture-localhost-8000-1454637873625.png)
